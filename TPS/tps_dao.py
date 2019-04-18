@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Alter:
     def create():
 

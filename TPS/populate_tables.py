@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -52,6 +53,59 @@ class PopulateTable:
                 movie_id='4130', 
                 movie_name='Star Wars: The rise of Skywalker', 
                 ratings='M'),
+        ])
+        session.add_all([
+            #Avenegers: Endgame session time
+            Screening(
+                cinema_id='24',
+                movie_id='4125', 
+                cinema_no='6', 
+                session_date='24/04/2019',
+                session_time='18:00'),
+
+            Screening(
+                cinema_id='27',
+                movie_id='4125', 
+                cinema_no='6', 
+                session_date='24/04/2019',
+                session_time='18:00'),
+            
+            Screening(
+                cinema_id='24',
+                movie_id='4125', 
+                cinema_no='6', 
+                session_date='24/04/2019',
+                session_time='18:00'),
+
+            Screening(
+                cinema_id='24',
+                movie_id='4125', 
+                cinema_no='6', 
+                session_date='24/04/2019',
+                session_time='18:00'),
+            
+            Screening(
+                cinema_id='24',
+                movie_id='4125', 
+                cinema_no='6', 
+                session_date='24/04/2019',
+                session_time='18:00'),
+            #Pet Sematary session time
+            Screening( 
+                cinema_id='25',
+                movie_id='4128', 
+                cinema_no='2', 
+                session_date='24/04/2019',
+                session_time='18:00'),
+
+            #Star Wars: The rise of Skywalker session time
+            Screening(
+                cinema_id='26',
+                movie_id='4130', 
+                cinema_no='10', 
+                session_date='24/04/2019',
+                session_time='18:00'),
+
         ])
 
 
