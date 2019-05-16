@@ -14,8 +14,8 @@ class Customer(Base):
     customer_id = Column(Integer, primary_key=True) # primary key
     firstname = Column(String(255), nullable=False) # non null
     lastname = Column(String(255), nullable=False) # non null
-    email = Column(String(255), nullable=False, unique=True)
-    phone_no = Column(Integer, nullable=False, unique=True) # non null, unique
+    email = Column(String(255), nullable=False)
+    phone_no = Column(Integer, nullable=False) # non null, unique
     dob = Column(String(255), nullable=False, unique=True) # non null, unique
     pass
 
@@ -26,7 +26,7 @@ class Booking(Base):
     booking_id = Column(Integer, primary_key=True) # primary key
     customer_id = Column(Integer, ForeignKey("customer.customer_id"))
     ticket_id = Column(Integer, ForeignKey("ticket.ticket_id"))
-    booking_date = Column(String(10), nullable=False)
+    booking_date = Column(String(255), nullable=False)
     num_guests = Column(Integer, nullable=False)
     comment = Column(String(255), nullable=True)
     
@@ -47,8 +47,8 @@ class Screening(Base):
     cinema_id = Column(Integer, primary_key=True) # primary key
     movie_id = Column(Integer, ForeignKey("movie.movie_id")) # foreign key
     cinema_no = Column(Integer, nullable=False) 
-    session_time = Column(Date, nullable=False)
-    session_date = Column(Date, nullable=False)
+    session_time = Column(String(255), nullable=False)
+    session_date = Column(String(255), nullable=False)
 
 class Ticket(Base):
 
